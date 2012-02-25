@@ -1,7 +1,7 @@
 Licks
 =====
 
-Licks is meant to be a frontend for a music analysis platform / api that I'm working on.
+Licks is meant to be a frontend for a music analysis platform / api that I'm working on. (see epitome)
 I would like record microphone input from the browser and send it to the backend where it
 will be processed with the sound processing library/API I'm working on.
 
