@@ -2,13 +2,22 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-  <script src="recorder.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="js/recorder.js"></script>
+  <script src="js/licks.js"></script>
 </head>
 <body>
-  WE ARE USING MY TEMPLATE!
   <div id="wrapper">
-    This is where the body will go!
+    Welcome to my web app!
   </div>
+  <div id="wami" style="margin-left: 100px;"></div>
+  <script>
+    $(document).ready(function()
+    {
+      Licks.setup();
+      alert("here we go");
+      Licks.recordSomething();
+    });
+  </script>
 </body>
 </html>
-

@@ -4,18 +4,14 @@
         [ring.middleware.reload]
         [ring.middleware.file]))
 
-;; This is where the webcode goes, there's a main endpoint that returns the
-;; index page and there's an endpoint that gets the music phrases and returns
-;; the transcriptions.
-;; The serving of the html should probably be done by ngix or something other
-;; than this transcription service but I'll deal with that later since this is
-;; just for fun.
+;; This is where the webcode goes
 
-;; Called with every jetty request
+;; Called with every jetty request, we want to return the index if
+;; they hit the root endpoint.
 (defn handler [req]
   {:status 200
    :headers {"Content-type" "text/html"}
-   :body (str req)})
+   :body (slurp "./src/licks/resources/index.html")})
 
 (def reload
   (wrap-reload #'handler '(licks.web)))
